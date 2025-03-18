@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*function sumTo(n) {
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+          sum += i;
+        }
+        return sum;
+      }
+      console.log(sumTo(100));
+      */
+
+      //using recursion
+
+      function sumTo(n) {
+        if (n === 0) {
+          return 1;
+        } else {
+          return n + sumTo(n - 1);
+        }
+      }
+      console.log(sumTo(100));
+
+      // let company = {
+      //   sales: [
+      //     {
+      //       name: "John",
+      //       salary: 1000,
+      //     },
+      //     {
+      //       name: "Alice",
+      //       salary: 1600,
+      //     },
+      //   ],
+
+      //   development: {
+      //     sites: [
+      //       {
+      //         name: "Peter",
+      //         salary: 2000,
+      //       },
+      //       {
+      //         name: "Alex",
+      //         salary: 1800,
+      //       },
+      //     ],
+
+      //     internals: [
+      //       {
+      //         name: "Jack",
+      //         salary: 1300,
+      //       },
+      //     ],
+      //     internals2: [
+      //       {
+      //         name: "Jack1  ",
+      //         salary: 13900,
+      //       },
+      //     ],
+      //     internals278: [
+      //       {
+      //         name: "Jack1  ",
+      //         salary: 13900,
+      //       },
+      //     ],
+      //     internals21: [
+      //       {
+      //         name: "Jack1  ",
+      //         salary: 13900,
+      //       },
+      //     ],
+      //     internals22: [
+      //       {
+      //         name: "Jack1  ",
+      //         salary: 13915,
+      //       },
+      //     ],
+      //   },
+      // };
+
+      // function totalSalaries(department) {
+      //   //case 1
+      //   if (Array.isArray(department)) {
+      //     return department.reduce((prev, current) => prev + current.salary, 0);
+      //   } else {
+      //     let sum = 0;
+      //     for (let subElement of Object.values(department)) {
+      //       sum += totalSalaries(subElement);
+      //     }
+      //     return sum;
+      //   }
+      // }
+
+      // // console.log(totalSalaries(company));
+      // let doublyList = {
+      //   value: 1,
+      //   next: { value: 2, next: null, prev: this },
+      //   prev: null,
+      // };
+      // // console.log(doublyList.next.value);
+
+      // let linkList = {
+      //   value: 1,
+      //   next: {
+      //     value: 2,
+      //     next: {
+      //       value: 3,
+      //       next: {
+      //         value: 4,
+      //         next: {
+      //           value: 5,
+      //           next: null,
+      //         },
+      //       },
+      //     },
+      //   },
+      // };
+
+      // linkList = {
+      //   value: "new items",
+      //   next: linkList,
+      // };
+      // linkList.next = linkList.next.next;
+      // console.log(linkList);
+
+      // function countDown(n, arr = []) {
+      //   if (n === 0) {
+      //     return arr;
+      //   }
+      //   arr.push(n);
+      //   return countDown(n - 1, arr);
+      // }
+
+      // let x = countDown(10);
+      // console.log(x);
+
+      // // The function to do the job
+      // function sumSalaries(department) {
+      //   if (Array.isArray(department)) {
+      //     // case (1)
+      //     return department.reduce((prev, current) => prev + current.salary, 0); // sum the array
+      //   } else {
+      //     // case (2)
+      //     let sum = 0;
+      //     for (let subdep of Object.values(department)) {
+      //       sum += sumSalaries(subdep); // recursively call for subdepartments, sum the results
+      //     }
+      //     return sum;
+      //   }
+      // }
+
+      // console.log(sumSalaries(company));
+      // 7700
+    </script>
+  </body>
+</html>
